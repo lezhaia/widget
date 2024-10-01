@@ -19,6 +19,25 @@
             "location": "Room 105",
             "time": "2:00 PM",
             "hall": "Tech Center"
+        },
+        {
+            "month": "JAN",
+            "day": "15",
+            "type": "WORKSHOP",
+            "title": "AI and Machine Learning",
+            "speaker": "Dr. Sarah Lee",
+            "location": "Room 105",
+            "time": "2:00 PM",
+            "hall": "Tech Center"
+        },        {
+            "month": "JAN",
+            "day": "15",
+            "type": "WORKSHOP",
+            "title": "AI and Machine Learning",
+            "speaker": "Dr. Sarah Lee",
+            "location": "Room 105",
+            "time": "2:00 PM",
+            "hall": "Tech Center"
         }
     ]
 }
