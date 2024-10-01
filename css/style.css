@@ -64,17 +64,12 @@
     margin-right: 5px;
 }
 
-.pinned {
-    border: 2px solid gold;  /* 置頂活動的邊框顯示金色 */
-    background-color: #fff8e1;
-}
-
 
 #event-widgets {
     display: flex;
     flex-wrap: wrap;  /* 允許活動換行顯示 */
     justify-content: flex-start;
-    gap: 20px;
+    gap: 5px;
     overflow-x: auto;  /* 允許水平滾動 */
 }
 
@@ -89,4 +84,9 @@
     .event-container {
         width: 100%;  /* 小螢幕上每行只顯示一個活動 */
     }
+}
+
+.pinned {
+    border: 2px solid gold;  /* 置頂活動的邊框顯示金色 */
+    background-color: #fff8e1;
 }
