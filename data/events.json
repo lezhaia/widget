@@ -7,7 +7,8 @@
         "location": "Hall for Life Sciences",
         "speaker": "John Taylor",
         "room": "Room 203",
-        "priority": 1
+        "priority": 1,
+        "pinned": true
     },
     {
         "title": "Digital Marketing Strategies",
@@ -17,65 +18,7 @@
         "location": "Business Hall",
         "speaker": "Sarah Parker",
         "room": "Room 204",
-        "priority": 2
-    },
-    {
-        "title": "Digital Marketing Strategies",
-        "date": "DEC 2",
-        "category": "Workshop",
-        "time": "12:00 PM",
-        "location": "Business Hall",
-        "speaker": "Sarah Parker",
-        "room": "Room 204",
-        "priority": 3
-    },
-    {
-        "title": "Digital Marketing Strategies",
-        "date": "DEC 2",
-        "category": "Workshop",
-        "time": "12:00 PM",
-        "location": "Business Hall",
-        "speaker": "Sarah Parker",
-        "room": "Room 204",
-        "priority": 4
-    },    {
-        "title": "Digital Marketing Strategies",
-        "date": "DEC 2",
-        "category": "Workshop",
-        "time": "12:00 PM",
-        "location": "Business Hall",
-        "speaker": "Sarah Parker",
-        "room": "Room 204",
-        "priority": 5
-    },
-    {
-        "title": "Digital Marketing Strategies",
-        "date": "DEC 2",
-        "category": "Workshop",
-        "time": "12:00 PM",
-        "location": "Business Hall",
-        "speaker": "Sarah Parker",
-        "room": "Room 204",
-        "priority": 6
-    },
-    {
-        "title": "Digital Marketing Strategies",
-        "date": "DEC 2",
-        "category": "Workshop",
-        "time": "12:00 PM",
-        "location": "Business Hall",
-        "speaker": "Sarah Parker",
-        "room": "Room 204",
-        "priority": 7
-    },
-    {
-        "title": "Digital Marketing Strategies",
-        "date": "DEC 2",
-        "category": "Workshop",
-        "time": "12:00 PM",
-        "location": "Business Hall",
-        "speaker": "Sarah Parker",
-        "room": "Room 204",
-        "priority": 8
+        "priority": 2,
+        "pinned": false
     }
 ]
