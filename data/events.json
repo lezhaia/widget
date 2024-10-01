@@ -1,24 +1,76 @@
-[
-    {
-        "title": "Leadership in a Digital Era",
-        "date": "DEC 1",
-        "category": "Lecture & Seminars",
-        "time": "10:00 AM",
-        "location": "Hall for Life Sciences",
-        "speaker": "John Taylor",
-        "room": "Room 203",
-        "priority": 1,
-        "pinned": true
-    },
-    {
-        "title": "Digital Marketing Strategies",
-        "date": "DEC 2",
-        "category": "Workshop",
-        "time": "12:00 PM",
-        "location": "Business Hall",
-        "speaker": "Sarah Parker",
-        "room": "Room 204",
-        "priority": 2,
-        "pinned": false
-    }
-]
+{
+    "events": [
+        {
+            "rank": 1,
+            "pinned": true,
+            "month": "DEC",
+            "day": "1",
+            "type": "LECTURE & SEMINARS",
+            "title": "Leadership in a Digital Era",
+            "speaker": "John Taylor",
+            "time": "10:00 AM",
+            "location": "Room 203",
+            "hall": "Hall for Life Sciences"
+        },
+        {
+            "rank": 2,
+            "pinned": false,
+            "month": "DEC",
+            "day": "2",
+            "type": "WORKSHOP",
+            "title": "Digital Marketing Strategies",
+            "speaker": "Sarah Parker",
+            "time": "12:00 PM",
+            "location": "Room 204",
+            "hall": "Business Hall"
+        },
+        {
+            "rank": 3,
+            "pinned": false,
+            "month": "DEC",
+            "day": "2",
+            "type": "WORKSHOP",
+            "title": "Digital Marketing Strategies",
+            "speaker": "Sarah Parker",
+            "time": "12:00 PM",
+            "location": "Room 204",
+            "hall": "Business Hall"
+        },
+        {
+            "rank": 4,
+            "pinned": false,
+            "month": "DEC",
+            "day": "2",
+            "type": "WORKSHOP",
+            "title": "Digital Marketing Strategies",
+            "speaker": "Sarah Parker",
+            "time": "12:00 PM",
+            "location": "Room 204",
+            "hall": "Business Hall"
+        },
+        {
+            "rank": 5,
+            "pinned": false,
+            "month": "DEC",
+            "day": "2",
+            "type": "WORKSHOP",
+            "title": "Digital Marketing Strategies",
+            "speaker": "Sarah Parker",
+            "time": "12:00 PM",
+            "location": "Room 204",
+            "hall": "Business Hall"
+        },
+        {
+            "rank": 6,
+            "pinned": false,
+            "month": "DEC",
+            "day": "2",
+            "type": "WORKSHOP",
+            "title": "Digital Marketing Strategies",
+            "speaker": "Sarah Parker",
+            "time": "12:00 PM",
+            "location": "Room 204",
+            "hall": "Business Hall"
+        }
+    ]
+}
