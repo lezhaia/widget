@@ -3,7 +3,7 @@
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    max-width: 600px;
+    max-width: 500px;
     margin: 10px;
 }
 
@@ -83,7 +83,7 @@
 }
 
 /* Responsive styling for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .event-container {
         width: 100%;  /* Stack them vertically on smaller screens */
     }
