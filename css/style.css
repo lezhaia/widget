@@ -67,26 +67,61 @@
 
 #event-widgets {
     display: flex;
-    flex-wrap: wrap;  /* 允許活動換行顯示 */
-    justify-content: flex-start;
-    gap: 5px;
-    overflow-x: auto;  /* 允許水平滾動 */
+    flex-wrap: wrap;
+    justify-content: space-between;  /* 卡片之間自動填滿剩餘空間 */
+    gap: 20px;  /* 卡片之間的間距 */
+    overflow-x: hidden;  /* 取消水平滾動，讓所有卡片保持在頁面範圍內 */
 }
 
 .event-container {
-    width: calc(33.33% - 20px);  /* 每行最多3個活動（減去間距） */
+    width: calc(33.33% - 20px);  /* 保持每行三個卡片 */
     box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.event-container:hover {
+    transform: scale(1.05);  /* 當滑鼠懸停時，卡片放大 */
+}
+
+.date {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.details h1 {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    margin-bottom: 5px;
+}
+
+.details h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.details p {
+    color: #777;
+}
+
+.info span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0.9rem;
+    color: #555;
 }
 
 @media (max-width: 768px) {
     .event-container {
-        width: 100%;  /* 小螢幕上每行只顯示一個活動 */
+        width: 100%;  /* 小螢幕時一行顯示一個卡片 */
     }
-}
-
-.pinned {
-    border: 2px solid gold;  /* 置頂活動的邊框顯示金色 */
-    background-color: #fff8e1;
 }
