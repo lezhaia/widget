@@ -63,31 +63,3 @@
 .details .info span i {
     margin-right: 5px;
 }
-
-
-
-
-/* Add this to your CSS file or modify the existing container styles */
-
-#event-widgets {
-    display: flex;
-    flex-wrap: wrap;  /* Allows wrapping to the next row if there are too many items */
-    justify-content: space-between;  /* Adds space between items */
-    gap: 20px;  /* Add space between the widgets */
-}
-
-.event-container {
-    display: flex;
-    flex-direction: row; /* Make individual events horizontal internally if desired */
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 30%;  /* Adjust width depending on how many you want in a row */
-    box-sizing: border-box;
-}
-
-/* Responsive styling for smaller screens */
-@media (max-width: 768px) {
-    .event-container {
-        width: 100%;  /* Stack them vertically on smaller screens */
-    }
-}
