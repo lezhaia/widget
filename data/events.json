@@ -19,6 +19,16 @@
             "location": "Room 105",
             "time": "2:00 PM",
             "hall": "Tech Center"
+        },
+        {
+            "month": "Test",
+            "day": "15",
+            "type": "Just Test",
+            "title": "AI and Machine Learning",
+            "speaker": "Dr. Sarah Lee",
+            "location": "Room 105",
+            "time": "2:00 PM",
+            "hall": "Tech Center"
         }
     ]
 }
