@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('data/events.json')
+    // Add a timestamp to the JSON request to prevent caching
+    const jsonUrl = `data/events.json?t=${new Date().getTime()}`;
+
+    fetch(jsonUrl)
         .then(response => response.json())
         .then(data => {
             const eventWidgetsContainer = document.getElementById('event-widgets');
