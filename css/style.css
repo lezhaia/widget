@@ -68,13 +68,13 @@
 #event-widgets {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;  /* 卡片之間自動填滿剩餘空間 */
-    gap: 20px;  /* 卡片之間的間距 */
-    overflow-x: hidden;  /* 取消水平滾動，讓所有卡片保持在頁面範圍內 */
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .event-container {
-    width: calc(33.33% - 20px);  /* 保持每行三個卡片 */
+    width: calc(33.33% - 20px); /* 一排顯示3個卡片，並考慮間隔 */
+    margin-bottom: 20px;
     box-sizing: border-box;
     padding: 15px;
     border: 1px solid #ddd;
@@ -85,7 +85,7 @@
 }
 
 .event-container:hover {
-    transform: scale(1.05);  /* 當滑鼠懸停時，卡片放大 */
+    transform: scale(1.05);
 }
 
 .date {
@@ -120,8 +120,9 @@
     color: #555;
 }
 
+/* 當畫面寬度小於768px時，卡片顯示為一排一個 */
 @media (max-width: 768px) {
     .event-container {
-        width: 100%;  /* 小螢幕時一行顯示一個卡片 */
+        width: 100%;
     }
 }

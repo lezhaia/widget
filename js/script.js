@@ -1,54 +1,55 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const config = {
-        enableRanking: true,  // 開關：是否根據rank屬性進行排序
-        enablePinning: true   // 開關：是否允許置頂功能
-    };
+// 假設從 events.json 中獲取數據
+fetch('events.json')
+  .then(response => response.json())
+  .then(events => {
+    
+    // 將事件分成置頂和非置頂
+    const pinnedEvents = events.filter(event => event.pinned);
+    const nonPinnedEvents = events.filter(event => !event.pinned);
 
-    const jsonUrl = `data/events.json?t=${new Date().getTime()}`;
+    // 將所有事件按照 priority 排序
+    pinnedEvents.sort((a, b) => a.priority - b.priority);
+    nonPinnedEvents.sort((a, b) => a.priority - b.priority);
 
-    fetch(jsonUrl)
-        .then(response => response.json())
-        .then(data => {
-            let events = data.events;
+    // 渲染事件
+    renderEvents(pinnedEvents, nonPinnedEvents);
+  })
+  .catch(error => console.log('Error fetching events:', error));
 
-            // 根據 `pinned` 和 `rank` 進行排序
-            if (config.enablePinning) {
-                events.sort((a, b) => b.pinned - a.pinned);
-            }
+function renderEvents(pinnedEvents, nonPinnedEvents) {
+    const eventContainer = document.getElementById('event-widgets');
+    eventContainer.innerHTML = ''; // 清空容器
 
-            if (config.enableRanking) {
-                events.sort((a, b) => a.rank - b.rank);
-            }
+    // 渲染置頂事件
+    pinnedEvents.forEach(event => {
+        const eventElement = createEventElement(event);
+        eventContainer.appendChild(eventElement);
+    });
 
-            const eventWidgetsContainer = document.getElementById('event-widgets');
-            
-            events.forEach(event => {
-                const widget = document.createElement('div');
-                widget.classList.add('event-container');
+    // 渲染非置頂事件
+    nonPinnedEvents.forEach(event => {
+        const eventElement = createEventElement(event);
+        eventContainer.appendChild(eventElement);
+    });
+}
 
-                // 如果活動置頂，添加一個樣式標記
-                if (event.pinned) {
-                    widget.classList.add('pinned');
-                }
+function createEventElement(event) {
+    // 創建事件卡片的 HTML 結構
+    const eventDiv = document.createElement('div');
+    eventDiv.classList.add('event-container');
 
-                widget.innerHTML = `
-                    <div class="date">
-                        <div>${event.month}</div>
-                        <span>${event.day}</span>
-                    </div>
-                    <div class="details">
-                        <h1>${event.type}</h1>
-                        <h2>${event.title}</h2>
-                        <p>${event.speaker} &middot; ${event.location}</p>
-                        <div class="info">
-                            <span><i class="fas fa-clock"></i> ${event.time}</span>
-                            <span><i class="fas fa-map-marker-alt"></i> ${event.hall}</span>
-                        </div>
-                    </div>
-                `;
+    eventDiv.innerHTML = `
+        <div class="date">${event.date}</div>
+        <div class="details">
+            <h1>${event.category}</h1>
+            <h2>${event.title}</h2>
+            <p>${event.speaker} · ${event.room}</p>
+            <div class="info">
+                <span><i class="fas fa-clock"></i> ${event.time}</span>
+                <span><i class="fas fa-map-marker-alt"></i> ${event.location}</span>
+            </div>
+        </div>
+    `;
 
-                eventWidgetsContainer.appendChild(widget);
-            });
-        })
-        .catch(error => console.error('Error loading event data:', error));
-});
+    return eventDiv;
+}
