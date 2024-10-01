@@ -1,34 +1,28 @@
 {
     "events": [
         {
-            "month": "OCT",
-            "day": "19",
-            "type": "應用英語科活動",
-            "title": "113年度親師生座談會",
-            "speaker": "梁淑娟主任",
-            "location": "C104階梯教室",
-            "time": "09:00 AM",
-            "hall": "樹人醫專"
+            "rank": 1,
+            "pinned": true,
+            "month": "DEC",
+            "day": "1",
+            "type": "LECTURE & SEMINARS",
+            "title": "Leadership in a Digital Era",
+            "speaker": "John Taylor",
+            "time": "10:00 AM",
+            "location": "Room 203",
+            "hall": "Hall for Life Sciences"
         },
         {
-            "month": "Test",
-            "day": "15",
-            "type": "Just Test",
-            "title": "AI and Machine Learning",
-            "speaker": "Dr. Sarah Lee",
-            "location": "Room 105",
-            "time": "2:00 PM",
-            "hall": "Tech Center"
-        },
-        {
-            "month": "Test",
-            "day": "15",
-            "type": "Just Test",
-            "title": "AI and Machine Learning",
-            "speaker": "Dr. Sarah Lee",
-            "location": "Room 105",
-            "time": "2:00 PM",
-            "hall": "Tech Center"
+            "rank": 2,
+            "pinned": false,
+            "month": "DEC",
+            "day": "2",
+            "type": "WORKSHOP",
+            "title": "Digital Marketing Strategies",
+            "speaker": "Sarah Parker",
+            "time": "12:00 PM",
+            "location": "Room 204",
+            "hall": "Business Hall"
         }
     ]
 }

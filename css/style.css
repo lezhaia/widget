@@ -64,25 +64,29 @@
     margin-right: 5px;
 }
 
+.pinned {
+    border: 2px solid gold;  /* 置頂活動的邊框顯示金色 */
+    background-color: #fff8e1;
+}
+
+
 #event-widgets {
     display: flex;
-    flex-wrap: wrap;  /* Allows wrapping to the next row if there are too many items */
-    justify-content: space-between;  /* Adds space between items */
-    gap: 5px;  /* Add space between the widgets */
+    flex-wrap: wrap;  /* 允許活動換行顯示 */
+    justify-content: flex-start;
+    gap: 20px;
+    overflow-x: auto;  /* 允許水平滾動 */
 }
 
 .event-container {
-    display: flex;
-    flex-direction: row; /* Make individual events horizontal internally if desired */
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 30%;  /* Adjust width depending on how many you want in a row */
+    width: calc(33.33% - 20px);  /* 每行最多3個活動（減去間距） */
     box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
 }
 
-/* Responsive styling for smaller screens */
 @media (max-width: 768px) {
     .event-container {
-        width: 100%;  /* Stack them vertically on smaller screens */
+        width: 100%;  /* 小螢幕上每行只顯示一個活動 */
     }
 }
